@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="./site.js"></script>
+        <style>
+            body {
+                background: rgba(25, 25, 25, 1);
+            }
+
+            #gradeBoxDIV {
+                padding: 10px;
+                background: black;
+                text-align: center;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 25vh;
+                width: 25vw;
+                color: white;
+                border-radius: 10px;
+            }
+
+            #gradeDisplayDIV p {
+                display: inline;
+                margin-bottom: 10px;
+                text-align: left !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="gradeBoxDIV">
+            <input type="text" id="gradeInput"><button type="button" id="submitGrade" class="funcButton">Submit Grade</button><button id="resetGrades" class="funcButton">Reset Grades</button>
+            <div id="gradeDisplayDIV">
+                Total Grade: <p id="totalGrade">0</p><br>
+                Lowest Grade: <p id="gradeMin">0</p><br>
+                Highest Grade: <p id="gradeMax">0</p><br>
+                Average Grade: <p id="gradeAve">0</p><br>
+            </div>
+        </div>
+    </body>
+</html>
