@@ -46,13 +46,14 @@ def get_change_given(price, paid):
         print("That is not enough money")
         return None
     
-# def verify_payment_input(userInput):
-#     try:
-#         userInput = float(userInput)
+def verify_payment_input(message):
+    userInput = input("%s\n:" % message)
+    try:
+        userInput = float(userInput)
         
-#         return userInput
-#     except:
-#         print("That is not a float!")
+        return userInput
+    except:
+        print("That is not a float!")
 
 ## DRIVER CODE ##
 if __name__ == "__main__":
@@ -80,8 +81,7 @@ if __name__ == "__main__":
         print("Subtotal: $ %.2f" % totalBeforeTax)
         print("Total + Tax: $ %.2f" % withTax)
         
-        print("How much would you like to pay?")
-        userInput = float(input(": "))
+        userInput = verify_payment_input("How much would you like to pay?")
         
         changeGiven = get_change_given(withTax, userInput)
         
